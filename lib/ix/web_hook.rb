@@ -19,10 +19,6 @@ module IX
       Request.new(*args, &blocks)
     end
 
-    def self.delivery_method
-      Configuration.instance.delivery_method
-    end
-
     def self.deliver(*args, &block)
       web_hook = self.new(args, &block)
       web_hook.deliver

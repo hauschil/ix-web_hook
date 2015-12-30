@@ -3,7 +3,7 @@ module IX
 
     class Request
       def initialize(*args, &block)
-        delivery_method WebHook.delivery_method.dup
+        delivery_method Configuration.instance.delivery_method.dup
         header Configuration.instance.header.dup
         option Configuration.instance.option.dup
         evaluate_args(*args)
