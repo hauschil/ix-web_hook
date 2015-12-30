@@ -2,7 +2,6 @@ module IX
   module WebHook
     class Helper
       def self.lookup_delivery_method(method, settings= {})
-        binding.pry
         case method.is_a?(String) ? method.to_sym : method
         when :faraday
           ::IX::WebHook::DeliveryMethod::Faraday.new(settings)
