@@ -1,6 +1,6 @@
 # IX::WebHook
 
-[![Code Climate](https://codeclimate.com/github/hauschil/ix-webhook.png)](https://codeclimate.com/github/hauschil/ix-web_hook)
+[![Code Climate](https://codeclimate.com/github/hauschil/ix-web_hook/badges/gpa.svg)](https://codeclimate.com/github/hauschil/ix-web_hook/badges/gpa.svg)
 [![Build Status](https://secure.travis-ci.org/hauschil/ix-webhook.png)](http://travis-ci.org/hauschil/ix-web_hook)
 
 Client library for making WebHook calls with exchangeable delivery methods. The purpose of this library is to be similar to the popular mail gem, which supports multiple delivery methods to deliver the mail. One of the most useful features is the option to use tools like letter_opener and letter_opener_web during development.
