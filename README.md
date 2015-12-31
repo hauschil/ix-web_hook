@@ -82,18 +82,19 @@ Or install it yourself as:
 ## Configuration
 
 You can configure your webhook defaults using the following block. If you are using Rails, you would normally add this code block in `config/initializers/ix_web_hook.rb`.
-
+```ruby
     IX::WebHook.configure do |config|
-      config.header
-      config.option
-      config.delivery_method :faraday # :console
+      config.header "any-http-header" => "value"
+      config.option "any-client-option" => "value"
+      config.delivery_method :faraday # :console, :test any derived from IX::WebHook::DeliveryMethod or implementing #deliver(request).
     end
-
+```
 Note, that all default configuration can be overwritten in each instance.
+
 ## Testing
-
+```sh
     rake spec
-
+```
 ## Contributing
 
 1. Fork it
