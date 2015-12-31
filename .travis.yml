@@ -2,8 +2,12 @@ language: ruby
 cache: bundler
 
 rvm:
- - "2.2.2"
  - "2.2.3"
+
+addons:
+  code_climate:
+    repo_token: 98a21cbf3e96536ed9c699689ce8dbd8cc89f70e21d952c9e992a4b59b823a8b
+
 
 script: 'bundle exec rake'
 

@@ -2,9 +2,10 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'ix/web_hook'
 require 'rspec/its'
 require 'webmock/rspec'
-
 WebMock.disable_net_connect!(:allow_localhost => true)
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
   # ## Mock Framework

@@ -40,7 +40,7 @@ module IX
           request.body = web_hook.body
         end
 
-        def handle_faraday_exceptions(&block)
+        def handle_faraday_exceptions
           response = begin
             yield
           rescue ::Faraday::TimeoutError  => exception

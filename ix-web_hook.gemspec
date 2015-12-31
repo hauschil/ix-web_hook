@@ -12,14 +12,14 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT' #FIXME
   spec.require_paths = ['lib']
 
-  spec.add_dependency('faraday', '~> 0.9') #FIXME
+  spec.add_dependency('faraday', '~> 0.9')
 
   spec.add_development_dependency 'bundler', '~> 1.9'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'rspec-its'
-  spec.add_development_dependency 'rspec-core'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'webmock'
-
+  spec.add_development_dependency 'rspec', '~> 3'
+  spec.add_development_dependency 'rspec-its', '~> 1'
+  spec.add_development_dependency 'pry', '~> 0'
+  spec.add_development_dependency 'webmock', '~> 1'
+  spec.add_development_dependency 'git', '~> 1.2'
+  spec.add_development_dependency 'codeclimate-test-reporter', '~> 0'
 end
