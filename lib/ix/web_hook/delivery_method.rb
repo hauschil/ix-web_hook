@@ -2,7 +2,7 @@ module IX
   module WebHook
 
     class DeliveryMethod
-      def initialize(settings = {}); end
+      def initialize(_settings = {}); end
 
     end
 

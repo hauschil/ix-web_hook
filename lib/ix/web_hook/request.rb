@@ -23,34 +23,22 @@ module IX
 
       def header=(hash); header(hash); end
       def header(hash = {})
-        @header ||= {}
-        hash.each_pair do |k,v|
-         @header[k] = v
-        end
-        @header
+        apply_hash(:@header, hash)
       end
 
       def option=(hash); option hash; end
       def option(hash = {})
-        @options ||= {}
-        hash.each_pair do |k,v|
-         @options[k] = v
-        end
-        @options
+        apply_hash(:@options, hash)
       end
 
       def url=(str); url(str); end
       def url(str = nil)
-        @url ||= nil
-        return @url if str.nil?
-        @url = str
+        apply_str(:@url, str, nil)
       end
 
       def body=(str); body(str); end
       def body(str = nil)
-        @body ||= ""
-        return @body if str.nil?
-        @body = str
+        apply_str(:@body, str)
       end
 
       private
@@ -71,6 +59,22 @@ module IX
         end
       end
 
+      def apply_hash(variable_symbol, hash = nil, default = {})
+        local = instance_variable_get(variable_symbol)
+        return local if hash.nil?
+        local ||= default.dup if default
+        hash.each_pair do |k,v|
+         local[k] = v
+        end
+        instance_variable_set(variable_symbol, local)
+      end
+
+      def apply_str(variable_symbol, str = nil, default = "")
+        local = instance_variable_get(variable_symbol)
+        local ||= default.dup if default
+        return local if str.nil?
+        instance_variable_set(variable_symbol, str)
+      end
     end
   end
 end
