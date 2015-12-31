@@ -19,3 +19,7 @@ notifications:
       - daniel.hauschildt@gmail.com
     on_failure: change
     on_success: never
+
+addons:
+    code_climate:
+        repo_token: 98a21cbf3e96536ed9c699689ce8dbd8cc89f70e21d952c9e992a4b59b823a8b
