@@ -3,7 +3,6 @@ module IX
 
     class DeliveryMethod
       def initialize(_settings = {}); end
-
     end
 
   end
