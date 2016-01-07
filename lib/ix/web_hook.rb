@@ -4,7 +4,7 @@ module IX
     # require 'version'
     # is_versioned
     require 'ix/web_hook/helper'
-    # require 'web_hook/version'
+    require 'ix/web_hook/concerns/has_dsl.rb'
     require 'ix/web_hook/configuration'
     require 'ix/web_hook/request'
     require 'ix/web_hook/response'
@@ -12,7 +12,6 @@ module IX
     require 'ix/web_hook/delivery_methods/faraday'
     require 'ix/web_hook/delivery_methods/console'
     require 'ix/web_hook/delivery_methods/test'
-
 
 
     def self.new(*args, &blocks)
