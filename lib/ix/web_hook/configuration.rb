@@ -1,9 +1,8 @@
 require 'singleton'
 module IX
   module WebHook
-
     class Configuration
-      include IX::WebHook::DSL
+      include ::IX::WebHook::DSL
 
       def self.instance(*args, &block)
         @@instance ||= Configuration.new(*args, &block)
@@ -20,7 +19,6 @@ module IX
         evaluate_block(block) if block_given?
         self
       end
-
     end
 
   end
